@@ -10,15 +10,15 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
  * @Description:
  * @DATE: Created in 17:12 2018/12/28.
  */
-@Configuration
-@EnableWebMvc
-@ComponentScan("com.hx.springboot.springmvc")
+//@Configuration
+//@EnableWebMvc
+//@ComponentScan("com.hx.springboot.springmvc")
 public class MyMvcConfig {
-    public InternalResourceViewResolver viewResolver() {
-        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-        viewResolver.setPrefix("/WEB-INF/classes/views/");
-        viewResolver.setSuffix(".jsp");
-
-        return viewResolver;
-    }
+//    public InternalResourceViewResolver viewResolver() {
+//        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+//        viewResolver.setPrefix("/WEB-INF/classes/views/");
+//        viewResolver.setSuffix(".jsp");
+//
+//        return viewResolver;
+//    }
 }

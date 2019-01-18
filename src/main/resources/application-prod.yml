@@ -1,0 +1,8 @@
+#server.port=9999
+#server.servlet.context-path=/helloBoot
+
+#my.name=yangfan
+#my.password=hx@5236
+
+logging:
+  config: classpath:conf/logback-prod.xml
