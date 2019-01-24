@@ -2,6 +2,8 @@ package com.hx.springboot.controller;
 
 import com.hx.springboot.common.IConstants;
 import com.hx.springboot.entity.JsonBean;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.DisabledAccountException;
@@ -21,6 +23,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @Controller
 @RequestMapping(value = "/auth")
+@Api(description = "登录跳转接口",tags = {"AuthenticationController"})
 public class AuthenticationController {
     private static final Logger log = LoggerFactory.getLogger(AuthenticationController.class);
 
@@ -31,6 +34,7 @@ public class AuthenticationController {
 
     @ResponseBody
     @RequestMapping(value = "/login_in", produces = "application/json;charset=UTF-8")
+    @ApiOperation(value="登录验证",notes = "通过shiro验证用户名密码是否匹配")
     public JsonBean loginIn(String userCode,String userPwd) {
         JsonBean reJson = new JsonBean();
         // shiro认证
