@@ -1,10 +1,15 @@
 package com.hx.springboot.entity;
 
+import com.hx.springboot.annotation.Column;
+import com.hx.springboot.annotation.Id;
+import com.hx.springboot.annotation.Table;
+
 /**
  * @Author: yangfan
  * @Description:
  * @DATE: Created in 15:53 2019/1/18.
  */
+@Table(value = "user_info")
 public class UserInfo {
     // 主键
     private long id;
@@ -17,6 +22,7 @@ public class UserInfo {
     // 备注
     private String remark;
 
+    @Id(value = "ID")
     public long getId() {
         return id;
     }
@@ -25,6 +31,7 @@ public class UserInfo {
         this.id = id;
     }
 
+    @Column(value = "userCode")
     public String getUserCode() {
         return userCode;
     }
@@ -33,6 +40,7 @@ public class UserInfo {
         this.userCode = userCode;
     }
 
+    @Column(value = "userName")
     public String getUserName() {
         return userName;
     }
@@ -41,6 +49,7 @@ public class UserInfo {
         this.userName = userName;
     }
 
+    @Column(value = "userPwd")
     public String getUserPwd() {
         return userPwd;
     }
@@ -49,6 +58,7 @@ public class UserInfo {
         this.userPwd = userPwd;
     }
 
+    @Column(value = "remark")
     public String getRemark() {
         return remark;
     }

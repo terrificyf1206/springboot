@@ -5,6 +5,7 @@ import com.hx.springboot.entity.UserInfo;
 import com.hx.springboot.entity.UserRoleInfo;
 import com.hx.springboot.mapper.DemoMapper;
 import com.hx.springboot.mapper.UserInfoMapper;
+import com.hx.springboot.service.BaseService;
 import com.hx.springboot.service.DemoService;
 import com.hx.springboot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,9 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserInfoMapper userInfoMapper;
 
+    @Autowired
+    private BaseServiceImpl baseService;
+
     @Override
     public List<UserInfo> getUserInfos(Map<String, Object> paramMap) {
         return userInfoMapper.getUserInfos(paramMap);
@@ -31,5 +35,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<UserRoleInfo> getUserRoleInfos(Map<String, Object> paramMap) {
         return userInfoMapper.getUserRoleInfos(paramMap);
+    }
+
+    @Override
+    public int insertUserInfo(UserInfo userInfo) {
+        return baseService.insert(userInfo);
     }
 }

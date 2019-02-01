@@ -29,5 +29,13 @@ public interface UserService {
     */
     List<UserRoleInfo> getUserRoleInfos(Map<String, Object> paramMap);
 
+    /**
+     * 新增用户信息
+     *
+     * @param userInfo
+     * @return int
+     */
+    int insertUserInfo(UserInfo userInfo);
+
 }
 
